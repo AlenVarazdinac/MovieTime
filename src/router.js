@@ -22,6 +22,27 @@ export default new Router({
       component: function() {
         return import(/* webpackChunkName: "about" */ "./views/About.vue");
       }
+    },
+    {
+      path: "/search/:title",
+      name: "searchNTitle",
+      component() {
+        return import("./views/Search.vue");
+      }
+    },
+    {
+      path: "/search",
+      name: "search",
+      component() {
+        return import("./views/Search.vue");
+      }
+    },
+    {
+      path: "/movies/:movieId",
+      name: "showMovie",
+      component() {
+        return import("./views/ShowMovie.vue");
+      }
     }
   ]
 });
